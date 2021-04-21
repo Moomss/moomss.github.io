@@ -17,6 +17,9 @@ h1, h2, h3, h4, h4, h6 {
   margin: 0;
 }
 
+.f {
+  text-align: center;
+}
 
 /* Container */
 .container {
@@ -32,6 +35,7 @@ h1, h2, h3, h4, h4, h6 {
   justify-content: center;
   width: 100%;
   height: 100vh;
+  color: #fff;
   
   background: #000;
 }
@@ -51,12 +55,17 @@ h1, h2, h3, h4, h4, h6 {
   line-height: 1;
 }
 
+.intro__title.small {
+  margin-top: 15px;
+  font-size: 45px;
+}
+
 .intro__title:after {
   content: '';
   display: block;
   width: 60px;
   height: 3px;
-  margin: 60px auto 60px;
+  margin: 30px auto 30px;
   
   background-color: #fff;
 }
@@ -64,7 +73,6 @@ h1, h2, h3, h4, h4, h6 {
 .intro__suptitle {
   margin-bottom: 15px;
   font-size: 50px;
-  color: #fff;
   font-family: 'Kaushan Script', cursive;
 }
 
@@ -104,7 +112,7 @@ h1, h2, h3, h4, h4, h6 {
 .nav__link {
   display: inline-block;
   vertical-align: top;
-  margin: 0 10px;
+  margin: 0 5px;
   position: relative;
   
   color: #fff;
@@ -175,9 +183,24 @@ h1, h2, h3, h4, h4, h6 {
   width: 100%;
   
   position: absolute;
-  bottom: 0;
   left: 0;
   z-index: 1;
+}
+
+.slider.one {
+  bottom: 0;
+}
+
+.slider.two {
+  bottom: calc(0px - 100vh);
+}
+
+.slider.three {
+  bottom: calc(0px - 200vh);
+}
+
+.slider.four {
+  bottom: calc(0px - 300vh);
 }
 
 .slider__inner {
@@ -192,12 +215,13 @@ h1, h2, h3, h4, h4, h6 {
   position: relative;
   
   border-top: 3px solid #fff;
-  opacity: .7;
+  opacity: .5;
   
   font-size: 15px;
   text-transform: uppercase;
 }
 
+.slider__item.next, 
 .slider__item.active {
   opacity: 1;
 }
@@ -205,7 +229,7 @@ h1, h2, h3, h4, h4, h6 {
 .slider__item.active:before {
   content: '';
   display: block;
-  width: 25%;
+  width: 100%;
   height: 3px;
   
   background-color: #f38181;
